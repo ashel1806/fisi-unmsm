@@ -1,7 +1,8 @@
 import Link from "next/link"
 import Head from "next/head"
 import Layout from "../../components/layout"
-import { getAllCourses } from "../../lib/courses"
+import Card from "../../components/card"
+import { getAllCourses, getSlugOfCourse } from "../../lib/courses"
 
 export async function getStaticProps() {
   const allCoursesData = await getAllCourses()
@@ -19,19 +20,22 @@ export default function Courses({ allCoursesData }) {
       <Head>
         <title>Cursos</title>
       </Head>
-      <h1>List of courses</h1>
-      <Link href='/'>
-        <a>Back to Home</a>
-      </Link>
-      <ul>
+
+      <h1 className="py-7 text-center text-5xl font-bold">Lista de Cursos</h1>
+
+      <ul className="grid grid-cols-1 md:grid-cols-3 smart:grid-cols-2 grid-flow-row gap-4">
         {allCoursesData.map(course => {
-          const courseName = course.nombre.toLowerCase().replace(/ /g, '-')
+          const courseSlug = getSlugOfCourse(course.nombre)
 
           return (
             <li key={course.nombre}>
-              <Link href={`/courses/${courseName}`}>
-                {course.nombre}
-              </Link>
+              <Card
+                course
+                slug={courseSlug}
+                name={course.nombre}
+                credits={course.creditos}
+                semester={course.ciclo}
+              />
             </li>
           )
         })}

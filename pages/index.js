@@ -1,19 +1,9 @@
-import Link from 'next/link'
+import Layout from '../components/layout'
 
 export default function Home() {
   return (
-    <div>
-      <h1>This site is for see details of courses and teachers of FISI from UNMSM</h1>
-      <div>
-        <Link href='/courses'>
-          <a>See Courses</a>
-        </Link>
-      </div>
-      <div>
-        <Link href='/teachers'>
-          <a>See Teachers</a>
-        </Link>
-      </div>
-    </div>
+    <Layout>
+      <h1 className="text-center text-5xl py-4 font-bold">Fisi - App</h1>
+    </Layout>
   )
 }
