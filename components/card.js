@@ -20,7 +20,7 @@ export default function Card({...props}) {
             <div className="w-14 h-14 flex-shrink-0 mr-5">
               <Image
                 className="rounded-full"
-                src={props.image.replace('https://res.cloudinary.com/ashel-root/', '')}
+                src={props.image}
                 alt={props.name}
                 width={56}
                 height={56}
