@@ -12,6 +12,8 @@ export default function Card({...props}) {
                   props.categoria === 'programacion' && 'bg-red-300' ||
                   props.categoria === 'economia' && 'bg-light-blue-200'
 
+  const fixedImageUri = props.image.replace('https://res.cloudinary.com/ashel-root/', '')
+
   return (
     <div className="p-5 bg-white rounded-3xl mb-4 h-full border-2 border-black-200">
       <div className="flex flex-col h-full justify-between">
@@ -20,7 +22,7 @@ export default function Card({...props}) {
             <div className="w-14 h-14 flex-shrink-0 mr-5">
               <Image
                 className="rounded-full"
-                src={props.image}
+                src={fixedImageUri}
                 alt={props.name}
                 width={56}
                 height={56}
