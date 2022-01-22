@@ -19,6 +19,7 @@ export default function Card({...props}) {
           {props.image ? (
             <div className="w-14 h-14 flex-shrink-0 mr-5">
               <Image
+                loader={"https://res.cloudinary.com/ashel-root/"}
                 className="rounded-full"
                 src={props.image}
                 alt={props.name}
