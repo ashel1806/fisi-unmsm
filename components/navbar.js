@@ -13,38 +13,34 @@ export default function NavBar() {
 
   return (
     <div>
-      <nav className="bg-gray-200">
-        <div className="max-w-7xl mx-auto px-8">
-          <div className="flex items-center justify-between h-16">
+      <nav className="bg-black-100 smart:bg-white">
+        <div className="max-w-screen-total mx-auto px-4 py-2">
+          <div className="flex items-center justify-between h-12">
             <div className="flex items-center">
               <Link href='/'>
                 <a className="flex-shrink-0">
                   <Image
-                    className="h-8 w-8"
                     src={fisiLogo}
                     alt='Logo de la FISI'
-                    width={32}
-                    height={32}
+                    width={40}
+                    height={40}
                   />
                 </a>
               </Link>
               <div className="hidden smart:block">
                 <div className="ml-10 flex items-baseline space-x-4">
                   <Link href='/courses'>
-                    <a className="text-gray-400 hover:text-gray-800 px-3 py-2 rounded-md text-sm font-medium">Cursos</a>
+                    <a className="font-body text-black-400 hover:text-black-800 px-3 py-2 rounded-md text-sm  font-medium smart:text-lg md:text-xl lg:text-2xl">Cursos</a>
                   </Link>
                   <Link href='/teachers'>
-                    <a className="text-gray-400 hover:text-gray-800 px-3 py-2 rounded-md text-sm font-medium">Profesores</a>
+                    <a className="font-body text-black-400 hover:text-black-800 px-3 py-2 rounded-md text-sm  font-medium smart:text-lg md:text-xl lg:text-2xl">Profesores</a>
                   </Link>
                 </div>
               </div>
             </div>
-            <div className="block">
-              <div className="ml-4 flex items-center md:ml-6"></div>
-            </div>
-            <div className="-mr-2 flex smart:hidden">
+            <div className="flex smart:hidden">
               <button
-                className="text-gray-800 inline-flex items-center justify-center p-2 rounded-md focus:outline-none"
+                className="text-black-800 inline-flex items-center justify-center rounded-md focus:outline-none"
                 onClick={handleClick}
               >
                 <svg width="20" height="20" fill="currentColor" className="h-8 w-8" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg">
@@ -57,12 +53,12 @@ export default function NavBar() {
         <div className={`${active ? '' : 'hidden'} smart:hidden`}>
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
             <Link href='/courses'>
-              <a className="text-gray-400 hover:text-gray-800 block px-3 py-2 rounded-md text-base font-medium">
+              <a className="text-black-400 hover:text-black-800 block px-3 py-2 rounded-md text-base font-medium font-body">
                 Cursos
               </a>
             </Link>
             <Link href='/teachers'>
-              <a className="text-gray-400 hover:text-gray-800 block px-3 py-2 rounded-md text-base font-medium">
+              <a className="text-black-400 hover:text-black-800 block px-3 py-2 rounded-md text-base font-medium font-body">
                 Profesores
               </a>
             </Link>
