@@ -1,6 +1,5 @@
 import Link from "next/link"
 import Image from "next/image"
-import fisiLogo from "../public/fisi.png"
 
 import { useState } from "react"
 
@@ -20,7 +19,7 @@ export default function NavBar() {
               <Link href='/'>
                 <a className="flex-shrink-0">
                   <Image
-                    src={fisiLogo}
+                    src='/Profesores/fisi_uigaex.png'
                     alt='Logo de la FISI'
                     width={40}
                     height={40}

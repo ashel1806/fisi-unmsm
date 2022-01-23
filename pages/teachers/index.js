@@ -54,7 +54,7 @@ export default function Teachers({ allTeachersData }) {
             </div>
           </div>
         </div>
-        <ul className="grid grid-cols-1 auto-rows-[minmax(100px,_auto)] md:grid-cols-3 smart:grid-cols-2 grid-flow-row gap-4">
+        <ul className="grid grid-cols-1 auto-rows-[minmax(100px,_auto)] grid-flow-row gap-4 md:grid-cols-2 lg:grid-cols-3">
           {filteredTeachers.map(teacher => {
             const nameSlug = getSlugOfTeacher(teacher)
 
