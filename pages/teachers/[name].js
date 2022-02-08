@@ -2,7 +2,6 @@ import Head from "next/head"
 import Link from "next/link";
 import Image from "next/image";
 import Layout from "../../components/layout";
-import ListItem from "../../components/listItem";
 import { getSlugOfCourse } from "../../lib/courses";
 import { getAllTeachersNames, getTeacherData } from "../../lib/teachers";
 
@@ -25,6 +24,8 @@ export async function getStaticPaths() {
 }
 
 export default function Teacher({ teacherData }) {
+  console.log('normal link', teacherData.imagen)  
+  console.log('shorted link', teacherData.imagen.replace(/\/https\D+v[0-9]+/, ''))
   return (
     <Layout>
       <Head>
@@ -35,7 +36,7 @@ export default function Teacher({ teacherData }) {
           <div className="mb-10 rounded-lg flex items-center justify-center">
             <Image
               alt={teacherData.nombres}
-              src={teacherData.imagen}
+              src={teacherData.imagen.replace(/\D+v[0-9]+/, '')}
               width={160}
               height={160}
             />

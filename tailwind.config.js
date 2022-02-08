@@ -18,7 +18,7 @@ module.exports = {
         'heading': ['Work Sans', 'serif'],
         'subheading': ['Domine', 'serif'],
         'body': ['Roboto', 'serif']
-      }
+      },
     },
     colors: {
       'red-100': '#FFEBEF',

@@ -4,7 +4,7 @@ import { CgMathPercent } from 'react-icons/cg'
 import { BsCodeSlash } from 'react-icons/bs'
 import { MdAttachMoney } from 'react-icons/md'
 
-export default function Card({...props}) {
+export default function Card({ ...props }) {
   const baseUrl = props.course ? '/courses' : '/teachers'
   const slug = `${baseUrl}/${props.slug}`
 

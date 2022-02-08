@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import Head from "next/head"
 import Layout from "../../components/layout"
 import Card from "../../components/card"
+import Filter from '../../components/filter'
 import { getAllCourses, getSlugOfCourse } from "../../lib/courses"
 
 export async function getStaticProps() {
@@ -55,6 +56,7 @@ export default function Courses({ allCoursesData }) {
           </div>
         </div>
 
+        <Filter />
         <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 grid-flow-row gap-4">
           {filteredCourses.map(course => {
             const courseSlug = getSlugOfCourse(course.nombre)
